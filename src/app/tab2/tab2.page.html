@@ -1,0 +1,153 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-grid class="p-0">
+      <ion-row class="p-13 pb-0">
+        <ion-col class="ion-justify-content-center">
+
+          <ion-title class='heroTitle'>
+            History
+          </ion-title>
+        </ion-col>
+        <ion-col size="2">
+          <ion-avatar class="d-flex ion-justify-content-end">
+            <!-- <ion-icon name="refresh-outline" class="icon-profile"></ion-icon> -->
+            <ion-icon name="sync-outline" size="large"></ion-icon>
+          </ion-avatar>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </ion-toolbar>
+</ion-header>
+<ion-content [fullscreen]="true">
+  <ion-refresher slot="fixed" (ionRefresh)="handleRefresh($event)">
+    <ion-refresher-content></ion-refresher-content>
+  </ion-refresher>
+  <!-- <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">Tab 2</ion-title>
+    </ion-toolbar>
+  </ion-header> -->
+
+  <ion-grid class="p-0">
+    <ion-row class="p-13 pt-0">
+      <p class='heroTitle'>Monday, 11 July</p>
+    </ion-row>
+    <!-- <div data-id="1" class="aos-item" data-aos="fade-up"> -->
+    <ion-row #squareA>
+      <ion-col>
+        <ion-card class="activitycard">
+          <ion-grid>
+            <ion-row>
+              <ion-col size="3" class="measures">
+                <p class="m-0 measures__selector">Weight</p>
+                <p class="m-0 measures__units">52,3<span class="measures__units--type">kg</span></p>
+              </ion-col>
+              <ion-col size="3">
+                <div id="linechart" class="customLineChart"></div>
+              </ion-col>
+            </ion-row>
+          </ion-grid>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+  <!-- </div> -->
+    <ion-row #squareB>
+      <ion-col>
+        <ion-card class="activitycard">
+          <ion-grid>
+            <ion-row>
+              <ion-col size="3">
+                <p class="m-0 text-icon">BMI</p>
+              </ion-col>
+              <ion-col class="ion-text-end text-icon flex-v-center-h-end">
+                <span>17.3</span> <ion-icon name="caret-up-outline" class="icon-primary"></ion-icon>
+              </ion-col>
+            </ion-row>
+            <ion-row>
+              <ion-col size="4">
+                <ion-progress-bar class="activitycard__progressbar" value=".10"></ion-progress-bar>
+              </ion-col>
+              <ion-col size="4">
+                <ion-progress-bar class="activitycard__progressbar" value=".0"></ion-progress-bar>
+              </ion-col>
+              <ion-col size="4">
+                <ion-progress-bar class="activitycard__progressbar" value=".0"></ion-progress-bar>
+              </ion-col>
+            </ion-row>
+            <ion-row class="ion-text-center">
+              <ion-col>
+                <p>18.5</p>
+              </ion-col>
+              <ion-col>
+                <p>20</p>
+              </ion-col>
+            </ion-row>
+            <ion-row>
+              <ion-col>
+                <ul class="legends">
+                  <li class="legends__marker legends__marker--low">
+                    <span>Low</span>
+                  </li>
+                  <li class="legends__marker legends__marker--normal">
+                    <span>Normal</span>
+                  </li>
+                  <li class="legends__marker legends__marker--high">
+                    <span>High</span>
+                  </li>
+                </ul>
+              </ion-col>
+            </ion-row>
+          </ion-grid>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+
+    <ion-row #squareC>
+      <ion-col class="d-flex overflow-x-auto">
+        <ion-card class="activitycard activitycard--large">
+          <ion-grid>
+            <ion-row>
+              <ion-col size="3" class="measures">
+                <p class="m-0 measures__selector">Weight</p>
+                <p class="m-0 measures__units">52,3<span class="measures__units--type">kg</span></p>
+              </ion-col>
+              <ion-col size="3">
+                <div id="piechart1" class="rounded-chart rounded-chart--bg-none" style="width: 100%;"></div>
+              </ion-col>
+            </ion-row>
+          </ion-grid>
+        </ion-card>
+
+        <ion-card class="activitycard activitycard--large">
+          <ion-grid>
+            <ion-row>
+              <ion-col size="3" class="measures">
+                <p class="m-0 measures__selector">Sleep</p>
+                <p class="m-0 measures__units">6<span class="measures__units--type">h</span>20<span class="measures__units--type">min</span></p>
+              </ion-col>
+              <ion-col size="3">
+                <div id="piechart2" class="rounded-chart rounded-chart--bg-none" style="width: 100%;"></div>
+              </ion-col>
+            </ion-row>
+          </ion-grid>
+        </ion-card>
+
+        <ion-card class="activitycard activitycard--large">
+          <ion-grid>
+            <ion-row>
+              <ion-col size="3" class="measures">
+                <p class="m-0 measures__selector">Weight</p>
+                <p class="m-0 measures__units">52,3<span class="measures__units--type">kg</span></p>
+              </ion-col>
+              <ion-col size="3">
+                <div id="piechart3" class="rounded-chart rounded-chart--bg-none" style="width: 100%;"></div>
+              </ion-col>
+            </ion-row>
+          </ion-grid>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+  <!-- <app-explore-container name="Tab 2 page"></app-explore-container> -->
+</ion-content>

@@ -1,0 +1,80 @@
+.addIcon__wrap {
+    position: fixed;
+    bottom: 13px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 9999;
+    button {
+        background: transparent;
+    }
+    &--icon {
+        width: 80px;
+        height: 80px;
+        color: var(--ion-color-primary);
+        &::after {
+            background: white;
+            content: '';
+            position: absolute;
+            width: 58px;
+            height: 58px;
+            left: 50%;
+            bottom: 7px;
+            border-radius: 50px;
+            transform: translateX(-50%);
+            z-index: -1;
+        }
+    }
+  }
+
+
+//   ion-popover::part(content) {
+//     top: unset !important;
+//     bottom: 0;
+//   }
+
+popover-wrapper {
+    opacity: 0;
+    z-index: 10;
+
+.popover-arrow {
+    display: block;
+    position: absolute;
+    width: 20px;
+    height: 10px;
+    overflow: hidden;
+}
+}
+
+.ionArrow {
+    position: relative;
+    &::after {
+        position:absolute;
+    }
+}
+ion-popover {
+    --width: 320px;
+    --height:400px;
+    --padding-top:20px;
+    --padding-bottom:20px;
+    --padding-right:20px;
+    --padding-left:20px;
+  }
+  on-popover {
+    --padding: 20px;
+    --border-radius:20px;
+  }
+  ion-content {
+      --overflow: auto !important;
+  }
+  ion-item {
+        margin-bottom:20px;
+        box-shadow: 0 5px 10px rgb(0 0 0 / 30%);
+        padding: 10px;
+        border-radius: 10px;
+        --padding-start:0;
+        --border-color:transparent
+    }
+  .bicycleIcon {
+   margin-right: 15px; 
+  }
+  

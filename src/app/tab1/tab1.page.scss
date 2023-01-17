@@ -1,0 +1,23 @@
+ion-grid {
+    height: 100%;
+    margin-top: 0;
+}
+ion-row {
+    display: flex;
+    justify-content: center;
+    margin-top: 0;
+}
+.no-scroll .scroll-content{
+    overflow: hidden;
+}
+.underline {
+    text-decoration: underline;
+  }
+
+  ion-progress-bar {
+    --background: #F2F0FD;
+    --progress-background: var(--ion-color-secondary);
+  }
+
+  
+ 

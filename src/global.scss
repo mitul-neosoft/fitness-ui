@@ -1,0 +1,413 @@
+/*
+ * App Global CSS
+ * ----------------------------------------------------------------------------
+ * Put style rules here that you want to apply globally. These styles are for
+ * the entire app and not just one component. Additionally, this file can be
+ * used as an entry point to import other CSS/Sass files to be included in the
+ * output CSS.
+ * For more information on global stylesheets, visit the documentation:
+ * https://ionicframework.com/docs/layout/global-stylesheets
+ */
+
+/* Core CSS required for Ionic components to work properly */
+@import "~@ionic/angular/css/core.css";
+
+/* Basic CSS for apps built with Ionic */
+@import "~@ionic/angular/css/normalize.css";
+@import "~@ionic/angular/css/structure.css";
+@import "~@ionic/angular/css/typography.css";
+@import '~@ionic/angular/css/display.css';
+
+/* Optional CSS utils that can be commented out */
+@import "~@ionic/angular/css/padding.css";
+@import "~@ionic/angular/css/float-elements.css";
+@import "~@ionic/angular/css/text-alignment.css";
+@import "~@ionic/angular/css/text-transformation.css";
+@import "~@ionic/angular/css/flex-utils.css";
+
+:root {
+    --ion-color-primary: #7B66FF;
+    --ion-color-primary-rgb: 0, 102, 0;
+    --ion-color-primary-contrast: #ffffff;
+    --ion-color-primary-contrast-rgb: 255, 255, 255;
+    --ion-color-primary-shade: #5f48f3;
+    --ion-color-primary-tint: #321faf;
+
+    --ion-color-secondary: #C3FF4D;
+    --ion-color-primary-rgb: 0, 102, 0;
+    --ion-color-primary-contrast: #ffffff;
+    --ion-color-primary-contrast-rgb: 255, 255, 255;
+    --ion-color-primary-shade: #b5ee45;
+    --ion-color-primary-tint: #88b62c;
+    --black:#000000;
+    --lightGreen: #BDE852;
+
+  }
+  .d-flex {
+    display: flex;
+  }
+  .overflow-x-auto {
+    overflow-x: auto;
+  }
+  .flex-column {
+    flex-direction: column;
+  }
+  .flex-v-h-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .flex-v-center-h-end {
+    display: flex;
+    justify-content: end;
+    align-items: center;
+  }
+  .icon-primary {
+    fill: var(--ion-color-primary);
+    color: var(--ion-color-primary);
+  }
+  .w-100 {
+    width: 100%;
+  }
+  .header-md::after {
+    background-image: none;
+  }
+  .heroTitle,
+  .title-default,
+  .section-title {
+    font-weight: 600;
+    padding: 0;
+  }
+  .heroProfile {
+    width: 50px;
+    height: 50px;
+  }
+  .heroTitle slot {
+    display:flex;
+    align-items: center;
+  }
+  .section-title {
+    font-size: 18px;
+  }
+  .section-subTitle {
+    font-size: 14px;
+    font-weight: 600;
+    color: #bdbaba;
+  }
+  .p-0 {
+    padding: 0 !important;
+  }
+  .pt-0 {
+    padding-top: 0 !important;
+  }
+  .pb-0 {
+    padding-bottom: 0 !important;
+  }
+  .m-0 {
+    margin: 0 !important;
+  }
+  .mt-0 {
+    margin-top: 0 !important;
+  }
+  .mb-0 {
+    margin-bottom: 0 !important;
+  }
+  .p-13 {
+    padding: 13px;
+  }
+  .mt-15 {
+    margin-top:30px !important;
+  }
+  .text-black {
+    color:var(--black)
+  }
+  .rounded-chart {
+    &--bg-none {
+      svg {
+          > rect {
+            fill:transparent !important;
+          }
+      }
+    }
+    svg {
+      rect[fill*="#cccccc"],
+      rect[fill*="#3366cc"] {
+        display: none;
+      }
+      text[fill*='#222222'] {
+        fill: white;
+      }
+        > rect {
+          fill: var(--ion-color-primary);
+          rx: 20px;
+        }
+      
+      > g {
+        > g {
+          > g {
+            rect {
+              rx: 6px;
+              width: 15px;
+            }
+          }
+        }
+      }
+
+      g {
+        &:first-child {
+          g {
+            display: none;
+          }
+        }
+        &:nth-child(2) {
+          > g {
+           > rect {
+            &:first-child{
+              fill: #beb1f8;
+             stroke: #beb1f8;
+            }
+             fill: var(--ion-color-secondary);
+             stroke: var(--ion-color-secondary);
+           }
+          }
+          g {
+             > text {
+              display: none;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .bicycleIcon {
+    fill: var(--ion-color-primary);
+    color: var(--ion-color-primary);
+  }
+  .text-icon {
+    font-size: 16px;
+    margin: 0 5px;
+    color: var(--black);
+  }
+
+  .playIcon {
+    color: var(--lightGreen);
+    width: 50px;
+    height: 50px;
+    svg {
+      color: var(--ion-color-secondary);
+    }
+  }
+
+  .activitycard {
+    display: flex;
+    align-items: center;
+    border-radius: 20px;
+    padding: 15px 20px;
+    min-width: 45%;
+    margin: 10px;
+    overflow-y: auto;
+    box-shadow: 0 5px 10px rgb(0 0 0 / 30%);
+    &--large {
+      min-width: 95%;
+    }
+    &--button {
+      min-height: 100px;
+      justify-content: center;
+      font-size: 20px;
+      font-weight: 700;
+      &.btn-active {
+        border: 1px solid var(--ion-color-secondary);
+      }
+    }
+    &__icon {
+        width: 25px;
+        height: 25px;
+    }
+    &__title {
+        font-weight: bold;
+        font-size: 20px;
+        color: var(--black);
+        margin: 0;
+    }
+    &__subtitle {
+        font-size: 14px;
+        color: grey;
+        margin: 0 0 10px 0;
+    }
+    &__progressbar {
+        height: 8px;
+        border-radius: 50px;
+    }
+    &__cardContent {
+        padding: 0;
+        padding-left: 15px;
+    }
+  }
+
+  // .menu-icon {
+
+  // }
+
+  .ion-progress-bar > :host(.ion-color) .progress-buffer-bar {
+    background-color: #F2F0FC;
+  }
+
+  .icon-profile {
+    width: 25px;
+    height: 25px;
+    color: var(--black);
+  }
+
+  .measures {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    &__selector {
+      font-size: 18px;
+      color: var(--black);
+    }
+    &__units {
+      font-size: 30px;
+      color: var(--black);
+      font-weight: bold;
+      white-space: nowrap;
+      &--type {
+        display: inline-block;
+        margin-left: 3px;
+        font-size: 16px;
+        color: #cbc7c7;
+        font-weight: normal;
+      }
+    }
+  }
+
+  .legends {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    &__marker {
+      position: relative;
+      list-style: none;
+      font-size: 12px;
+      color: #cbc7c7;
+      margin-left: 20px;
+      &::after {
+        position: absolute;
+        content: '';
+        transform: translateY(-50%); 
+        left: -10px;
+        top: 50%;
+        width: 5px;
+        height: 5px;
+        border-radius: 50px;
+      }
+      &--low {
+        &::after {
+          background-color: #BDE852;
+        }
+      }
+      &--normal {
+        &::after {
+          background-color: #bbb4f5;
+        }
+      }
+      &--high {
+        &::after {
+          background-color: #8275F4;
+        }
+      }
+    }
+  }
+
+  .customLineChart {
+    svg {
+      circle {
+        fill: var(--ion-color-primary);
+      }
+      g {
+        &:first-child {
+          > rect{
+              display: none;
+          }
+        }
+        &:nth-child(2) {
+          g {
+            &:last-child {
+              path {
+                stroke: var(--ion-color-secondary);
+              }
+            }
+          }
+          rect {
+            display: none;
+          }
+        }
+      }
+    }
+  }
+
+  .squareButton {
+    width: 100%;
+    margin:0 auto;
+    width: calc(100% - 30%);
+    display: block;
+    text-transform: capitalize;
+  }
+
+  button.button-native {
+    padding: 25px !important;
+    font-size: 18px !important;
+    font-weight: 700 !important;
+  }
+  .btn-no-bg {
+    background-color: transparent;
+  }
+  .heroTitle .toolbar-title {
+    display: flex;
+    align-items: center;
+  }
+  .widgetCount {
+    font-size: 46px;
+    font-weight: 500;
+  }
+  .settings-outline {
+    width: 22px;
+  }
+
+  .counter {
+    background-color: var(--ion-color-primary);
+    color: #fff;
+    font-size: 40px;
+    font-weight: 800;
+    padding: 30px;
+    margin: 50px auto;
+    border-radius: 20px 20px 50px 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+
+  ion-button.squareButton {
+    --border-radius: 10px;
+    --padding-bottom:30px;
+    --padding-right:30px;
+    --padding-top:30px;
+    --padding-left:30px;
+    --height:100%;
+    font-size: 20px;
+    letter-spacing: 1px;
+    &:host {
+      font-size: 20px;
+    }
+  }
+  
+  
+ 
+  
+  

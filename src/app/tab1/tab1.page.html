@@ -1,0 +1,116 @@
+<ion-header [translucent]="true" no-border no-shadow>
+  <ion-toolbar>
+    <ion-grid>
+      <ion-row class="ion-justify-content-between p-13">
+        <ion-title class='heroTitle'>
+          My Activity
+        </ion-title>
+        <ion-col size="2">
+          <ion-avatar class="heroProfile ">
+            <img src="assets/user.jpeg">
+          </ion-avatar>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-refresher slot="fixed" (ionRefresh)="handleRefresh($event)">
+    <ion-refresher-content></ion-refresher-content>
+  </ion-refresher>
+  <!-- <ion-header collapse="condense" no-border no-shadow>
+    <ion-toolbar>
+      <ion-title class='heroTitle'></ion-title>
+      <ion-avatar class="heroProfile">
+        <img  src="assets/user.jpeg">
+      </ion-avatar>
+
+    </ion-toolbar>
+  </ion-header> -->
+
+  <ion-grid>
+    <ion-row #squareA>
+      <ion-col class="d-flex overflow-x-auto">
+        <ion-card class="activitycard">
+          <div class="flex-v-h-center">
+            <ion-icon class='icon-primary activitycard__icon' name="flame-outline" size="large"></ion-icon>
+          </div>
+          <div class="w-100">
+            <ion-card-content class="activitycard__cardContent">
+              <h2 class="activitycard__title">866</h2>
+              <p class="activitycard__subtitle">Calories burn</p>
+              <ion-progress-bar class="activitycard__progressbar" value=".15"></ion-progress-bar>
+            </ion-card-content>
+          </div>
+        </ion-card>
+
+        <ion-card class="activitycard">
+          <div class="flex-v-h-center">
+            <ion-icon class='icon-primary activitycard__icon' name="footsteps-outline" size="large"></ion-icon>
+          </div>
+          <div class="w-100">
+            <ion-card-content class="activitycard__cardContent">
+              <h2 class="activitycard__title">7579</h2>
+              <p class="activitycard__subtitle">Steps</p>
+              <ion-progress-bar class="activitycard__progressbar" value=".85"></ion-progress-bar>
+            </ion-card-content>
+          </div>
+        </ion-card>
+
+        <ion-card class="activitycard">
+          <div class="flex-v-h-center">
+            <ion-icon class='icon-primary activitycard__icon' name="watch-outline" size="large"></ion-icon>
+          </div>
+          <div class="w-100">
+            <ion-card-content class="activitycard__cardContent">
+              <h2 class="activitycard__title">27</h2>
+              <p class="activitycard__subtitle">Left Today</p>
+              <ion-progress-bar class="activitycard__progressbar" value=".35"></ion-progress-bar>
+            </ion-card-content>
+          </div>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+    <ion-row class="p-13 mt-15">
+      <ion-col class="d-flex ion-justify-content-between p-0">
+        <ion-card-title class="section-title">Goal for week</ion-card-title>
+        <span class="section-subTitle">42 of 54</span>
+      </ion-col>
+    </ion-row>
+    <ion-row #squareB>
+      <ion-col>
+        <div id="piechart" class="rounded-chart" style="width: 100%;"></div>
+      </ion-col>
+    </ion-row>
+    <ion-row class="p-13 mt-15">
+      <ion-col class="d-flex ion-justify-content-between p-0">
+        <ion-card-title class="section-title">Trending Workouts</ion-card-title>
+        <a class="section-subTitle" routerLink="/">see all</a>
+      </ion-col>
+    </ion-row>
+    <ion-row #squareC style="padding-bottom: 50px;">
+      <ion-col>
+        <ion-card class="activitycard">
+          <ion-row class="ion-align-items-center w-100">
+            <ion-col class="d-flex ion-justify-content-between ion-align-items-center w-100">
+              <div class="d-flex ion-align-items-center">
+                <ion-icon class='bicycleIcon' name="bicycle" size="large"></ion-icon>
+                <p class="text-icon">Muscle Builder</p>
+              </div>
+              <ion-icon name="caret-forward-circle-outline" class="playIcon" size="large"></ion-icon>
+            </ion-col>
+          </ion-row>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+
+</ion-content>
+<!-- <ion-content padding class="login-background no-scroll" >
+  <ion-grid>
+   
+  </ion-grid>
+</ion-content> -->
